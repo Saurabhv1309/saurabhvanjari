@@ -126,6 +126,32 @@
             font-size: 1.4rem;
         }
 
+        .contact-form {
+            max-width: 400px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            background: #0f172a;
+            color: #fff;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background: var(--primary);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+
     </style>
 </head>
 <body>
@@ -295,7 +321,20 @@
                 <a href="tel:+918390195802" class="cv-btn">Call Now</a>
             </div>
         </div>
+         <form action="https://formspree.io/f/xeeeqezd" method="POST" class="contact-form">
+    
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
     </section>
+
+   
+
 
     <script>
         function toggleMenu() {
