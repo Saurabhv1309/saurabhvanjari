@@ -1,144 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saurabh Vanjari | QA Engineer Portfolio</title>
     <style>
          :root {
-            --primary: #00d2ff;
-            --secondary: #3a7bd5;
-            --bg: #0f172a;
-            --card-bg: #1e293b;
-            --text: #f8fafc;
-        }
-
-        /* * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--bg); color: var(--text); scroll-behavior: smooth; } */
-        
-/* Navigation
-        nav {
-            position: fixed; top: 0; width: 100%; background: rgba(15, 23, 42, 0.95);
-            padding: 1.2rem 10%; display: flex; justify-content: space-between;
-            align-items: center; z-index: 1000; border-bottom: 1px solid #334155;
-        } */
-/*          
-        .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: 1px; color: var(--primary); }
-        .nav-links { list-style: none; display: flex; gap: 2rem; }
-        .nav-links a { text-decoration: none; color: #94a3b8; font-weight: 500; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); } */
-
-        /* Sections */
-        /* section { min-height: 100vh; padding: 120px 15% 60px; }
-        .hero { display: flex; align-items: center; gap: 50px; }
-        .hero-text { flex: 1; }
-        .hero-image { flex: 1; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
-        .hero-image img { width: 100%; display: block; filter: grayscale(20%); } */
-
-
-
-
-        h1 { font-size: 3.5rem; margin-bottom: 0.5rem; line-height: 1.1; }
-        .blue-gradient { background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } 
- 
-        /* Cards & Experience */
-        /* .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
-        .card { background: var(--card-bg); padding: 30px; border-radius: 15px; border: 1px solid #334155; position: relative; }
-        .tag { position: absolute; top: 20px; right: 20px; background: #38bdf822; color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; }  */
-
-
-        /* Education & Skills */
-        /* .edu-item { border-left: 2px solid var(--primary); padding-left: 20px; margin-bottom: 30px; }
-        .skill-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-        .skill-tag { background: #334155; padding: 8px 15px; border-radius: 5px; font-size: 0.9rem; } */
-
-
-        /* Footer */
-        footer { text-align: center; padding: 40px; border-top: 1px solid #334155; color: #64748b; }
-        :root {
             --primary: #38bdf8;
+            --secondary: #3a7bd5;
             --bg-dark: #0f172a;
             --bg-card: #1e293b;
             --text-main: #f8fafc;
             --text-dim: #94a3b8;
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: var(--bg-dark); color: var(--text-main); scroll-behavior: smooth; line-height: 1.6; }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: var(--bg-dark); color: var(--text-main); scroll-behavior: smooth; } 
-
-        /* Navigation */
+        /* --- Navigation --- */
         nav {
-            position: fixed; top: 0; width: 100%; background:rgba(15, 23, 42, 3.5);
-            padding: 1.2rem 10%; display: flex; justify-content: space-between;
+            position: fixed; top: 0; width: 100%; background: rgba(15, 23, 42, 0.95);
+            padding: 1rem 5%; display: flex; justify-content: space-between;
             align-items: center; z-index: 1000; border-bottom: 1px solid #334155;
-             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-
+            backdrop-filter: blur(10px);
         }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); letter-spacing: 1px; }
-        .nav-links { list-style: none; display: flex; gap: 2rem; }
-        .nav-links a { text-decoration: none; color: var(--text-dim); transition: 0.3s; font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--primary); } 
+        .logo { font-size: 1.2rem; font-weight: bold; color: var(--primary); letter-spacing: 1px; }
 
-        /* General Section Styling */
-        
-        section { min-height: 100vh; padding: 120px 10% 60px; border-bottom: 1px solid #1e293b; }
-        h2 { font-size: 2.5rem; margin-bottom: 2rem; position: relative; } 
+        /* Mobile Menu Toggle */
+        .menu-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
 
-        /* h2::after { content: ''; display: block; width: 50px; height: 4px; background: var(--primary); margin-top: 10px; }
-        .accent { color: var(--primary); } */
+        .nav-links { list-style: none; display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-dim); transition: 0.3s; font-size: 0.9rem; }
+        .nav-links a:hover { color: var(--primary); }
 
-        /* Hero / Home */
-        .hero { display: flex; align-items: center; gap: 50px; }
+        /* --- General Layout --- */
+        section { min-height: auto; padding: 80px 8% 40px; border-bottom: 1px solid #1e293b; }
+        .blue-gradient { background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
+        h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+
+        /* --- Hero Section --- */
+        .hero { display: flex; flex-direction: column-reverse; align-items: center; gap: 30px; text-align: center; padding-top: 120px; }
         .hero-text { flex: 1; }
-
-        /* Small Image Tag as requested */
-        /* .profile-img { 
-            width: 160px; height: 160px; object-fit: cover; 
-            border-radius: 15px; border: 3px solid var(--primary); 
-            margin-bottom: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        } */
-
-        /* Experience & Project Cards */
-         .card { background: var(--bg-card); padding: 30px; border-radius: 12px; margin-bottom: 30px; border-left: 5px solid var(--primary); }
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
-        .skill-tag { background: #0ea5e922; color: var(--primary); padding: 5px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 8px; display: inline-block; } 
-
-        /* Education */
-        .edu-item { margin-bottom: 25px; padding-left: 20px; border-left: 2px solid #334155; } 
-
-        /* Contact Box */
-         .contact-box { background: var(--bg-card); padding: 40px; border-radius: 20px; text-align: center; } 
-
-        @media (max-width: 768px) {
-            .hero { flex-direction: column; text-align: center; }
-            .nav-links { display: none; }
+        .profile-img { 
+            width: 220px; height: 220px; object-fit: cover; 
+            border-radius: 50%; border: 3px solid var(--primary); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
+        /* Floating Contact Info (Desktop) vs Stacked (Mobile) */
+        .contact-right { margin-top: 15px; display: flex; justify-content: center; gap: 15px; }
+        .contact-line a { color: var(--primary); text-decoration: none; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
+
+        /* --- Cards & Grids --- */
+        .card { background: var(--bg-card); padding: 25px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid var(--primary); width: 100%; }
+        .project-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        .skill-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; justify-content: center; }
+        .skill-tag { background: #0ea5e922; color: var(--primary); padding: 6px 14px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+
+        /* --- Buttons --- */
         .cv-btn {
-            padding: 0.5rem 1.2rem;
-            border: 0.5px solid var(--primary);
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            border-radius: 6px;
-            transition: all 0.3s ease;
+            padding: 0.5rem 1rem; border: 1px solid var(--primary);
+            color: var(--primary); text-decoration: none; border-radius: 6px;
+            transition: 0.3s;
+        }
+        .cv-btn:hover { background: var(--primary); color: #0f172a; }
+
+        /* --- TABLET & DESKTOP ADJUSTMENTS --- */
+        @media (min-width: 992px) {
+            section { padding: 100px 15% 60px; }
+            .hero { flex-direction: row; text-align: left; gap: 50px; }
+            .profile-img { width: 300px; height: 300px; border-radius: 20px; }
+            .project-grid { grid-template-columns: repeat(2, 1fr); }
+            .skill-list { justify-content: flex-start; }
+            h1 { font-size: 3.5rem; }
+            .contact-right { justify-content: flex-start; }
         }
 
-        .cv-btn:hover {
-            background-color: var(--primary);
-            color: #0f172a;
+        /* --- MOBILE MENU OVERLAY --- */
+        @media (max-width: 991px) {
+            .menu-toggle { display: block; }
+            .nav-links {
+                position: fixed; top: 60px; left: -100%; width: 100%; height: calc(100vh - 60px);
+                background: var(--bg-dark); flex-direction: column; padding: 40px;
+                transition: 0.4s; z-index: 999;
+            }
+            .nav-links.active { left: 0; }
         }
+
         
-
         .contact-right {
             position:absolute;
             right:20px;
-            top: 15%;
+            top: 10%;
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
@@ -176,53 +131,28 @@
 <body>
 
     <nav>
-        <div class="logo">SOTWARE TESTER</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#summary">Summary</a></li>
-            <li><a href="#experience">Work</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-                <a style="color:var(--primary)" href="Saurabh_Vanjari_CV.pdf" 
-                    class="cv-btn" 
-                    download> 
-                    Download CV
-                </a>
-            </li>
+        <div class="logo">SOFTWARE TESTER</div>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#summary" onclick="toggleMenu()">Summary</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Work</a></li>
+            <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="Saurabh_Vanjari_CV.pdf" class="cv-btn" download>Download CV</a></li>
         </ul>
-        
-        
-
     </nav>
 
-
-    
     <section id="about" class="hero">
         <div class="hero-text">
-            <div class="contact-right">
-
-                <div class="contact-line">
-                    <a href="tel:+918390195802" class="phone">
-                        📞 +91 8390195802
-                    </a>
-                    <a href="https://wa.me/918390195802?text=Hi%20Saurabh,%20I%20visited%20your%20website"
-                    target="_blank"
-                    class="whatsapp"
-                    aria-label="Chat on WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                 </div>
-             </div>
-
-
             <h1>Hi, I'm <span class="blue-gradient">Saurabh Vanjari</span></h1>
-           <p style="font-size: 1.2rem; margin: 20px 0;">
-            I have 2+ years of experience as a Manual Tester in the Retail Banking domain, especially in LMS and LOS projects, 
-            performing functional, database, and API testing. Skilled in Agile-Scrum, I collaborate with developers and product 
-            owners to ensure timely, high-quality software delivery.
+            <p style="font-size: 1.1rem; color: var(--text-dim); margin-bottom: 20px;">
+                I have 2+ years of experience as a Manual Tester in the Retail Banking domain, especially in LMS and LOS projects, 
+                performing functional, database, and API testing. Skilled in Agile-Scrum, I collaborate with developers and product 
+                owners to ensure timely, high-quality software delivery.
             </p>
+            
             <div class="skill-list">
                 <span class="skill-tag">Agile-Scrum</span> 
                 <span class="skill-tag">Jira</span>
@@ -230,37 +160,45 @@
                 <span class="skill-tag">SQL</span> 
                 <span class="skill-tag">LMS/LOS</span>
             </div>
+
+
+
+            <div class="contact-right">
+                <div class="contact-line">
+                    <a href="tel:+918390195802">📞 +91 8390195802</a>
+                    <a href="https://wa.me/918390195802" target="_blank" style="color:#25D366;">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href=""></a>
+                </div>
+            </div>
+
         </div>
-
-         <img src="image.jpg" alt="Profile" style="width: 300px; height: 300px; object-fit: cover; border-radius: 10px; border: 2px solid #38bdf8;">
+        <img src="image.jpg" alt="Saurabh Vanjari" class="profile-img">
     </section>
-
-
 
     <section id="summary" style="background: #0b1120;">
         <h2 class="blue-gradient">Professional Summary</h2>
         <div class="card">
-            <p style="color: var(--text-dim); line-height: 1.8;">
-                <ul style="margin-top: 15px; color: #94a3b8; padding-left: 20px; line-height: 1.8;">
+            <ul style="padding-left: 20px; color: var(--text-dim); font-size: 0.95rem;">
                     <li>Software Test Engineer with 2+ years of experience in Retail Banking and Loan Management (LOS & LMS) projects.</li>
                     <li>Strong expertise in Manual Testing: Functional, Integration, System, Regression, Sanity, Smoke, Retesting, and UAT.</li>
                     <li>Well-versed in SDLC, STLC, and Agile (Scrum) methodology; active participation in sprint ceremonies.</li>
                     <li>Experienced in test case design, execution, and complete defect life cycle management using JIRA.</li>
                     <li>Hands-on experience in API testing using Postman and database validation using SQL queries.</li>
                     <li>Quick learner, team player, and highly adaptable to project and technology changes.</li>
-                 </ul>
-            </p>
+            </ul>
         </div>
     </section>
 
     <section id="experience">
         <h2 class="blue-gradient">Work Experience</h2>
         <div class="card">
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
-                <h3>Software Tester</h3>
-                <span class="accent">Sept, 2023 – Present</span>
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 3px;">
+                <h3 style="color: var(--primary);">Software Tester</h3>
+                <span style="font-size: 0.85rem; color: var(--text-dim);">Sept 2023 – Present</span>
             </div>
-             <p style="color: var(--primary); margin: 5px 0; ;"><b>Intent Technologies, Pune</b></p>
+            <p><strong>Intent Technologies, Pune</strong></p>
                 <p style="color: var(--text-dim); font-size: small;">Sept-2023 – Feb-2024 (Internship)</p>
                 <p style="color: var(--text-dim); font-size: small;">March-2024 – present (Full-Time)</p>
             <ul style="margin-top: 15px; padding-left: 20px; color: var(--text-dim);">
@@ -272,7 +210,7 @@
         </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" style="background: #0b1120;">
         <h2 class="blue-gradient">Technical Skills</h2>
         <div class="card">
             <ul style="margin-top: 15px; padding-left: 20px; color: var(--text-dim);">
@@ -282,13 +220,35 @@
                 <li><span style="font-weight: 700;">Tools:</span> SQL (MySQL), Postman, JIRA, TestLink.  </li>
                 <li><span style="font-weight: 700;">Soft Skills:</span> Analytical Thinking, Problem Solving, Team Collaboration, Continuous Learning.</li>
             </ul>
+            <!-- <div class="project-grid">
+                <div>
+                    <p><strong>Methodologies:</strong></p>
+                    <p class="skill-tag">Agile</p> <p class="skill-tag">V-Model</p>
+                </div>
+                <div>
+                    <p><strong>Tools:</strong></p>
+                    <p class="skill-tag">JIRA</p> <p class="skill-tag">Postman</p> <p class="skill-tag">SQL</p>
+                </div>
+            </div> -->
         </div>
     </section>
+
 
     <section id="projects" style="background: #0b1120;">
         <h2 class="blue-gradient">Key Projects</h2>
         <div class="project-grid">
-            <div class="card">
+                <div class="card">
+                    <h4 class="accent">Online Loan Application</h4>
+                    <p style="font-size: 1.1rem; margin: 10px 0;">End-to-end loan approval and disbursal lifecycle.</p>
+                    <p style="color: var(--text-dim);">The project involves comprehensive testing of a Online Loan application comprising Loan Origination System (LOS) and 
+                        Loan Management System (LMS). The LOS covers the full customer onboarding and loan approval lifecycle including KYC, 
+                        credit appraisal, and underwriting. The LMS manages the post-disbursal phase, handling loan account creation, EMI 
+                        management, interest calculations, and repayment tracking, delinquency tracking and customer support. The system 
+                        supports various loan products like personal loans, car loans, home loans and gold loan.
+                    </p>
+                </div>
+
+                <div class="card">
                 <h4 class="accent">Retail Banking Application</h4>
                 <p style="font-size: 1.1rem; margin: 10px 0;">Comprehensive banking services for individual customers.</p>
               
@@ -300,34 +260,22 @@
                     customer satisfaction, reduce manual errors, and offer banking services 24x7 through secure digital channels.
                 </p>
             </div>
-
-            <div class="card">
-                <h4 class="accent">Online Loan Application</h4>
-                <p style="font-size: 1.1rem; margin: 10px 0;">End-to-end loan approval and disbursal lifecycle.</p>
-                 <p style="color: var(--text-dim);">The project involves comprehensive testing of a Online Loan application comprising Loan Origination System (LOS) and 
-                    Loan Management System (LMS). The LOS covers the full customer onboarding and loan approval lifecycle including KYC, 
-                    credit appraisal, and underwriting. The LMS manages the post-disbursal phase, handling loan account creation, EMI 
-                    management, interest calculations, and repayment tracking, delinquency tracking and customer support. The system 
-                    supports various loan products like personal loans, car loans, home loans and gold loan.
-                </p>
-            </div>
         </div>
     </section>
 
-    <section id="education">
-         <h2 class="blue-gradient">Educational Details</h2>
-
-        <div class="card" style="display: flex; gap: 50px; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 300px;">
-                <div class="edu-item">
+   <section id="education">
+        <h2 class="blue-gradient">Educational Details</h2>
+        <div class="card" style="display: flex; gap: 50px;">
+            <div>
+                <div>
                     <h4>BE-IT (2019 - 2023)</h4>
                     <p>PCET's Pimpri Chinchwad College of Engineering, Pune.</p>
                 </div>
-                <div class="edu-item">
+                <div>
                     <h4>HSC (2019)</h4>
                     <p>Indirabai Lalwani Jr College, Jamner.</p>
                 </div>
-                 <div class="edu-item">
+                 <div>
                     <h4>SSC (2017)</h4>
                     <p>Indirabai Lalwani Madhyamic Vidyalaya, Jamner.</p>
                 </div>
@@ -335,19 +283,30 @@
         </div>
     </section>
 
-    <section id="contact" style="background: #0b1120;">
-        <div class="contact-box" style="border-left: 5px solid var(--primary);">
+   <section id="contact">
+        <div class="card" style="text-align: center; border-left: none; border-top: 5px solid var(--primary);">
             <h2 class="blue-gradient">Get In Touch</h2>
-            <p style="margin-bottom: 20px;">I am open to new opportunities in Software Testing within the Banking Domain.</p>
+            <p>I am open to new opportunities in Software Testing within the Banking Domain.</p>
             <p><strong>Email:</strong> saurabhvanjari2019@gmail.com</p>
             <p><strong>Mobile:</strong> +91 8390195802</p>
             <p><strong>Location:</strong> Pune, Maharashtra</p>
+            <div style="margin-top: 20px;">
+                <a href="tel:+918390195802" class="cv-btn">Call Now</a>
+            </div>
         </div>
     </section>
 
-    <!-- <footer style="padding: 30px; text-align: center; color: var(--text-dim); font-size: 0.8rem;">
-        &copy; 2026 Saurabh Vanjari | Quality Assurance Portfolio
-    </footer> -->
-
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
+
+
+
+
+
+
